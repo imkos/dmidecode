@@ -3,22 +3,20 @@ package battery_test
 import (
 	"testing"
 
+	"github.com/imkos/dmidecode/parser/battery"
+	"github.com/imkos/dmidecode/smbios"
 	"github.com/stretchr/testify/assert"
-	"github.com/yumaojun03/dmidecode/parser/battery"
-	"github.com/yumaojun03/dmidecode/smbios"
 )
 
-var (
-	s = &smbios.Structure{
-		Header: smbios.Header{
-			Type:   22,
-			Length: 26,
-			Handle: 44,
-		},
-		Formatted: []byte{0x01, 0x02, 0x03, 0x04, 0x05, 0x07, 0x00, 0x00, 0x00, 0x00, 0x00, 0xff, 0x00, 0x00, 0x00, 0x00, 0x06, 0x00, 0x00, 0x00, 0x00, 0x00},
-		Strings:   []string{"Fake", "-Virtual Battery 0-", "08/08/2010", "Battery 0", "CRB Battery 0", "LithiumPolymer"},
-	}
-)
+var s = &smbios.Structure{
+	Header: smbios.Header{
+		Type:   22,
+		Length: 26,
+		Handle: 44,
+	},
+	Formatted: []byte{0x01, 0x02, 0x03, 0x04, 0x05, 0x07, 0x00, 0x00, 0x00, 0x00, 0x00, 0xff, 0x00, 0x00, 0x00, 0x00, 0x06, 0x00, 0x00, 0x00, 0x00, 0x00},
+	Strings:   []string{"Fake", "-Virtual Battery 0-", "08/08/2010", "Battery 0", "CRB Battery 0", "LithiumPolymer"},
+}
 
 func TestParse(t *testing.T) {
 	should := assert.New(t)

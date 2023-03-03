@@ -1,7 +1,7 @@
 package battery
 
 import (
-	"github.com/yumaojun03/dmidecode/smbios"
+	"github.com/imkos/dmidecode/smbios"
 )
 
 // Parse 解析電池信息
@@ -27,5 +27,4 @@ func Parse(s *smbios.Structure) (info *Information, err error) {
 	}
 
 	return info, nil
-
 }

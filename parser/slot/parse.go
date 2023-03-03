@@ -1,7 +1,7 @@
 package slot
 
 import (
-	"github.com/yumaojun03/dmidecode/smbios"
+	"github.com/imkos/dmidecode/smbios"
 )
 
 // Parse 解析slot信息
@@ -23,5 +23,4 @@ func Parse(s *smbios.Structure) (info *SystemSlot, err error) {
 	}
 
 	return info, nil
-
 }

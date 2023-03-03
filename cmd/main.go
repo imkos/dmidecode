@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/yumaojun03/dmidecode"
+	"github.com/imkos/dmidecode"
 )
 
 var (
@@ -14,9 +14,7 @@ var (
 	t     string
 )
 
-var (
-	decoder *dmidecode.Decoder
-)
+var decoder *dmidecode.Decoder
 
 func main() {
 	dmi, err := dmidecode.New()

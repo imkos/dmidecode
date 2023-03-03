@@ -3,7 +3,7 @@ package oem
 import (
 	"fmt"
 
-	"github.com/yumaojun03/dmidecode/smbios"
+	"github.com/imkos/dmidecode/smbios"
 )
 
 // Information 系统信息
@@ -13,7 +13,7 @@ type OEM struct {
 }
 
 func (s OEM) String() string {
-	var strs = ""
+	strs := ""
 	for i, s := range s.Strings {
 		strs += fmt.Sprintf("\tString %d: %s\n", i+1, s)
 	}

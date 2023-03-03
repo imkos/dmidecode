@@ -1,9 +1,9 @@
 # dmidecode
-![Build and Test](https://github.com/yumaojun03/dmidecode/workflows/Build%20and%20Test/badge.svg)
+![Build and Test](https://github.com/imkos/dmidecode/workflows/Build%20and%20Test/badge.svg)
 [![codecov](https://codecov.io/gh/yumaojun03/dmidecode/branch/master/graph/badge.svg)](https://codecov.io/gh/yumaojun03/dmidecode)
-[![Go Report Card](https://goreportcard.com/badge/github.com/yumaojun03/dmidecode)](https://goreportcard.com/report/github.com/yumaojun03/dmidecode)
-[![Release](https://img.shields.io/github/release/yumaojun03/dmidecode.svg?style=flat-square)](https://github.com/yumaojun03/dmidecode/releases)
-[![MIT License](https://img.shields.io/github/license/yumaojun03/dmidecode.svg)](https://github.com/yumaojun03/dmidecode/blob/master/LICENSE)
+[![Go Report Card](https://goreportcard.com/badge/github.com/imkos/dmidecode)](https://goreportcard.com/report/github.com/imkos/dmidecode)
+[![Release](https://img.shields.io/github/release/yumaojun03/dmidecode.svg?style=flat-square)](https://github.com/imkos/dmidecode/releases)
+[![MIT License](https://img.shields.io/github/license/yumaojun03/dmidecode.svg)](https://github.com/imkos/dmidecode/blob/master/LICENSE)
 
 纯Golang实现的dmidecode, 零依赖, 支持Linux, Unix, Windows
 
@@ -14,7 +14,7 @@
 ## 安装方式
 
 ```
-$ go get "github.com/yumaojun03/dmidecode"
+$ go get "github.com/imkos/dmidecode"
 ```
 
 ## 使用样例
@@ -26,7 +26,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/yumaojun03/dmidecode"
+	"github.com/imkos/dmidecode"
 )
 
 func checkError(err error) {

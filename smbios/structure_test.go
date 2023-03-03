@@ -5,25 +5,22 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/yumaojun03/dmidecode/smbios"
+	"github.com/imkos/dmidecode/smbios"
 )
 
-var (
-	s = &smbios.Structure{
-		Header: smbios.Header{
-			Type:   9,
-			Length: 17,
-			Handle: 2304,
-		},
-		Formatted: []byte{0x1, 0xb1, 0xd, 0x3, 0x4, 0x1, 0x0, 0x4, 0x1, 0xff, 0xff, 0xff, 0xff},
-		Strings:   []string{"PCIe Slot 1"},
-	}
-)
+var s = &smbios.Structure{
+	Header: smbios.Header{
+		Type:   9,
+		Length: 17,
+		Handle: 2304,
+	},
+	Formatted: []byte{0x1, 0xb1, 0xd, 0x3, 0x4, 0x1, 0x0, 0x4, 0x1, 0xff, 0xff, 0xff, 0xff},
+	Strings:   []string{"PCIe Slot 1"},
+}
 
 func TestRead(t *testing.T) {
 	_, ss, err := smbios.ReadStructures()
 	t.Log(ss, err)
-
 }
 
 func TestTypes(t *testing.T) {

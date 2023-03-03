@@ -1,7 +1,7 @@
 package chassis
 
 import (
-	"github.com/yumaojun03/dmidecode/smbios"
+	"github.com/imkos/dmidecode/smbios"
 )
 
 // Parse 解析底座信息
@@ -25,7 +25,7 @@ func Parse(s *smbios.Structure) (info *Information, err error) {
 		ContainedElementCount:        s.GetByte(0xf),
 		ContainedElementRecordLength: s.GetByte(0x10),
 		// TODO: 7.4.4
-		//ci.ContainedElements:
+		// ci.ContainedElements:
 		SKUNumber: s.GetString(4),
 	}
 
